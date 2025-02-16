@@ -1,0 +1,39 @@
+---BUSQUEDA BINARIA---
+
+    Entrada: Un arreglo A de n elementos (debe estar ordenado) y un valor dato a buscar
+    Salida: La posición del valor encontrado o -1 si no se encuentra
+
+    1. Iniciar variables:
+        - inicio = 0
+        - fin = longitud del arreglo A - 1
+    2. Mientras inicio <= fin hacer
+        3. Calcular medio = (inicio + fin) / 2
+        4. Si A[medio] == dato entonces
+            5. Retornar medio (el índice donde se encontró el valor)
+        6. Si A[medio] < dato entonces
+            7. Asignar inicio = medio + 1 (buscar en la mitad derecha del arreglo)
+        8. Si no (si A[medio] > dato) entonces
+            9. Asignar fin = medio - 1 (buscar en la mitad izquierda del arreglo)
+    10. Fin Mientras
+    11. Retornar -1 (si no se encuentra el valor en el arreglo)
+Fin Algoritmo
+
+---BUSQUEDA SECUENCIAL---
+
+    Entrada: Un arreglo A de n elementos (A[0], A[1], ..., A[n-1])
+             y un valor dato a buscar
+    Salida: La posición del valor encontrado o -1 si no se encuentra
+
+    1. Iniciar pos = -1
+    2. Para i = 0 hasta longitud(A) - 1 hacer
+        3. Si A[i] == dato entonces
+            4. Asignar pos = i
+            5. Romper el ciclo (salir del bucle)
+    3. Fin Para
+    4. Si pos != -1 entonces
+        5. Imprimir "El elemento fue encontrado en la posición ", pos + 1
+    5. Sino
+        6. Imprimir "El elemento no fue encontrado"
+Fin Algoritmo
+
+
